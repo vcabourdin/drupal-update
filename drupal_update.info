@@ -1,0 +1,6 @@
+name = Drupal update
+description = Drupal deployment module
+package = Development
+core = 7.x
+files[] = drupal_update.install
+files[] = drupal_update.module

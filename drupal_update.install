@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * @file
+ * Execute update even on module install
+ */
+
+//Set modul schema version to 7000
+drupal_set_installed_schema_version('neurones_deploy',7000);
+
+/**
+ * Implements hook_install().
+ */
+function drupal_update_install()
+{
+    for ($i = 7001; $i < 8000; $i++) {
+        $p=array();
+        $candidate = 'neurones_deploy_update_' . $i;
+        if (function_exists($candidate)) {
+            $candidate($p);
+        }
+    }
+}

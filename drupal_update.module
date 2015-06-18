@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Migration example
+ * Enable a module
+ *
+ */
+function drupal_update_update_7001()
+{
+    if (!module_exists('devel')) {
+        module_enable(array('devel'));
+    }
+}
+
+/**
+ * Migration example
+ * Revert a feature
+ *
+ */
+function drupal_update_update_7002()
+{
+    module_invoke('features', 'revert_module', 'feature_config');
+}

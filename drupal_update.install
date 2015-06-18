@@ -6,7 +6,7 @@
  */
 
 //Set modul schema version to 7000
-drupal_set_installed_schema_version('neurones_deploy',7000);
+drupal_set_installed_schema_version('drupal_update',7000);
 
 /**
  * Implements hook_install().
